@@ -1,9 +1,15 @@
 import React from 'react';
 import Svg, { ClipPath, Defs, G, Path, Rect } from 'react-native-svg';
 
-interface IconCircleDeleteSolidProps {}
+interface IconCircleDeleteSolidProps {
+  color?: string;
+  size?: number;
+}
 
-export const IconCircleDeleteSolid = ({}: IconCircleDeleteSolidProps) => {
+export const IconCircleDeleteSolid = ({
+  color,
+  size,
+}: IconCircleDeleteSolidProps) => {
   return (
     <Svg width="20" height="21" viewBox="0 0 20 21" fill="none">
       <G clip-path="url(#clip0_41311_133048)">

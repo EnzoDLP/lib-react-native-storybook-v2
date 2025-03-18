@@ -3,9 +3,9 @@ import { Text, View, Pressable } from 'react-native';
 import IconCircleAddOutline from '../Icons/IconCircleAddOutline.component';
 import ProgressBar from '../ProgressBar/ProgressBar.component';
 import IconFileTextOutline from '../Icons/IconFileTextOutline.component';
-import IconCircleDeleteSolid from '../Icons/IconCircleDeleteSolid.component';
 import IconFileCheckSolid from '../Icons/IconFileCheckSolid.component';
 import IconEyesOutline from '../Icons/IconEyesOutline.component';
+import IconCircleDeleteSolid from '../Icons/IconCircleDeleteSolid.component';
 
 interface UploadButtonProps {
   onPress: () => void;
@@ -53,7 +53,7 @@ export const UploadButton = ({
         }}
       >
         <View>
-          <IconFileCheckSolid />
+          <IconFileCheckSolid color="#008859" />
         </View>
         <View style={{ gap: 6, flex: 1 }}>
           <Text
@@ -75,7 +75,7 @@ export const UploadButton = ({
             onPress={loaded.onCheck}
             hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
           >
-            <IconEyesOutline />
+            <IconEyesOutline color="#0F0F0F" />
           </Pressable>
           <Pressable
             onPress={loaded.onDelete}
@@ -106,7 +106,7 @@ export const UploadButton = ({
         }}
       >
         <View style={{ opacity: 0.4 }}>
-          <IconFileTextOutline />
+          <IconFileTextOutline color="#0F0F0F" />
         </View>
         <View style={{ flex: 1 }}>
           <Text
@@ -154,7 +154,7 @@ export const UploadButton = ({
         }}
         onPress={onPress}
       >
-        <IconCircleAddOutline />
+        <IconCircleAddOutline color="#008859" />
         <View style={{ gap: 6, flex: 1 }}>
           <Text
             style={{
