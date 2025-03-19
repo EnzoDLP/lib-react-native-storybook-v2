@@ -1,4 +1,17 @@
 {
   "name": "AwesomeStorybook",
-  "slug": "AwesomeStorybook"
+  "slug": "AwesomeStorybook",
+  "extra": {
+    "eas": {
+      "projectId": "076c7920-e2be-4c4c-b932-bdd2960c5626"
+    }
+  },
+  "owner": "enzodlp-capgemini",
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.app.templatebnp",
+    "infoPlist": {
+      "ITSAppUsesNonExemptEncryption": false
+    }
+  }
 }

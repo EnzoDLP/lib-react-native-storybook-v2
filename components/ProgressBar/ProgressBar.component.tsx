@@ -11,7 +11,7 @@ interface ProgressBarProps {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({
   progress,
-  height = 4,
+  height = 5,
   backgroundColor = '#0000001a',
   fillColor = '#008859',
   duration = 300,
@@ -34,9 +34,15 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
         width: '100%',
         borderRadius: 5,
         overflow: 'hidden',
-        height,
+        height: height,
         backgroundColor,
       }}
+      accessible={true}
+      accessibilityRole="progressbar"
+      accessibilityValue={{ min: 0, max: 100, now: progress }}
+      aria-valuenow={progress}
+      aria-valuemin={0}
+      aria-valuemax={100}
     >
       <Animated.View
         style={{

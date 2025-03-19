@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, View, Pressable } from 'react-native';
+import React, { useEffect } from 'react';
+import { Text, View, Pressable, AccessibilityInfo } from 'react-native';
 import IconCircleAddOutline from '../Icons/IconCircleAddOutline.component';
 import ProgressBar from '../ProgressBar/ProgressBar.component';
 import IconFileTextOutline from '../Icons/IconFileTextOutline.component';
@@ -23,7 +23,7 @@ interface UploadButtonProps {
     title: string;
     size: string;
     onDelete: () => void;
-    onCheck: () => void;
+    onCheck?: () => void;
   };
 }
 
@@ -35,6 +35,12 @@ export const UploadButton = ({
   loading,
   loaded,
 }: UploadButtonProps) => {
+  useEffect(() => {
+    if (error) {
+      AccessibilityInfo.announceForAccessibility(error.title);
+    }
+  }, [error]);
+
   if (loaded) {
     return (
       <View
@@ -71,15 +77,23 @@ export const UploadButton = ({
           </Text>
         </View>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          <Pressable
-            onPress={loaded.onCheck}
-            hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
-          >
-            <IconEyesOutline color="#0F0F0F" />
-          </Pressable>
+          {Boolean(loaded.onCheck) && (
+            <Pressable
+              onPress={loaded.onCheck}
+              hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
+              accessibilityRole="button"
+              accessibilityLabel="Aperçu"
+              accessibilityHint="Double clic pour afficher l'aperçu du fichier."
+            >
+              <IconEyesOutline color="#0F0F0F" />
+            </Pressable>
+          )}
           <Pressable
             onPress={loaded.onDelete}
             hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
+            accessibilityRole="button"
+            accessibilityLabel="Supprimer"
+            accessibilityHint="Double clic pour supprimer le fichier."
           >
             <IconCircleDeleteSolid />
           </Pressable>
@@ -127,6 +141,9 @@ export const UploadButton = ({
             <Pressable
               onPress={loading.onStop}
               hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
+              accessibilityLabel="Arrêter"
+              accessibilityRole="button"
+              accessibilityHint="Double clic pour arrêter le chargement du fichier."
             >
               <IconCircleDeleteSolid />
             </Pressable>
@@ -152,6 +169,9 @@ export const UploadButton = ({
           borderStyle: 'dashed',
           width: 325,
         }}
+        accessibilityRole="button"
+        accessibilityLabel={`${title}, ${subTitle}`}
+        accessibilityHint="Double clic pour ouvrir le sélecteur de fichier."
         onPress={onPress}
       >
         <IconCircleAddOutline color="#008859" />
