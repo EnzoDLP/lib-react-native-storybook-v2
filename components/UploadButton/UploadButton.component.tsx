@@ -6,6 +6,7 @@ import IconFileTextOutline from '../Icons/IconFileTextOutline.component';
 import IconFileCheckSolid from '../Icons/IconFileCheckSolid.component';
 import IconEyesOutline from '../Icons/IconEyesOutline.component';
 import IconCircleDeleteSolid from '../Icons/IconCircleDeleteSolid.component';
+import { Colors } from '../../theme';
 
 interface UploadButtonProps {
   onPress: () => void;
@@ -46,25 +47,28 @@ export const UploadButton = ({
       <View
         style={{
           padding: 15,
-          backgroundColor: '#FFFFFF',
+          backgroundColor: Colors.light.input.primary.background,
           borderRadius: 5,
           alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
-          borderColor: '#686767',
+          borderColor: Colors.light.input.primary.border,
           borderStyle: 'solid',
           width: 325,
         }}
       >
         <View>
-          <IconFileCheckSolid color="#008859" />
+          <IconFileCheckSolid
+            accessibilityLabel="Icône fichier chargé"
+            color={Colors.light.text.link}
+          />
         </View>
         <View style={{ gap: 6, flex: 1 }}>
           <Text
             style={{
-              color: '#0F0F0F',
+              color: Colors.light.text.primary,
               fontSize: 14,
               fontWeight: '600',
               lineHeight: 20,
@@ -72,7 +76,13 @@ export const UploadButton = ({
           >
             {loaded.title}
           </Text>
-          <Text style={{ color: '#0F0F0F', fontSize: 12, fontWeight: '400' }}>
+          <Text
+            style={{
+              color: Colors.light.text.primary,
+              fontSize: 12,
+              fontWeight: '400',
+            }}
+          >
             {loaded.size}
           </Text>
         </View>
@@ -85,7 +95,11 @@ export const UploadButton = ({
               accessibilityLabel="Aperçu"
               accessibilityHint="Double clic pour afficher l'aperçu du fichier."
             >
-              <IconEyesOutline color="#0F0F0F" />
+              <IconEyesOutline
+                accessibilityLabel="Icône voir fichier"
+                color={Colors.light.text.primary}
+                size={20}
+              />
             </Pressable>
           )}
           <Pressable
@@ -95,7 +109,11 @@ export const UploadButton = ({
             accessibilityLabel="Supprimer"
             accessibilityHint="Double clic pour supprimer le fichier."
           >
-            <IconCircleDeleteSolid />
+            <IconCircleDeleteSolid
+              accessibilityLabel="Icône supprimer"
+              color={Colors.light.text.primary}
+              size={20}
+            />
           </Pressable>
         </View>
       </View>
@@ -107,25 +125,28 @@ export const UploadButton = ({
       <View
         style={{
           padding: 15,
-          backgroundColor: '#FFFFFF',
+          backgroundColor: Colors.light.input.primary.background,
           borderRadius: 5,
           alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
-          borderColor: '#686767',
+          borderColor: Colors.light.input.primary.border,
           borderStyle: 'solid',
           width: 325,
         }}
       >
         <View style={{ opacity: 0.4 }}>
-          <IconFileTextOutline color="#0F0F0F" />
+          <IconFileTextOutline
+            accessibilityLabel="Icône fichier"
+            color={Colors.light.text.primary}
+          />
         </View>
         <View style={{ flex: 1 }}>
           <Text
             style={{
-              color: '#0F0F0F',
+              color: Colors.light.text.primary,
               opacity: 0.4,
               fontSize: 14,
               fontWeight: '600',
@@ -145,7 +166,11 @@ export const UploadButton = ({
               accessibilityRole="button"
               accessibilityHint="Double clic pour arrêter le chargement du fichier."
             >
-              <IconCircleDeleteSolid />
+              <IconCircleDeleteSolid
+                accessibilityLabel="Icône fichier chargé"
+                color={Colors.light.text.primary}
+                size={20}
+              />
             </Pressable>
           </View>
         </View>
@@ -158,14 +183,14 @@ export const UploadButton = ({
       <Pressable
         style={{
           padding: 15,
-          backgroundColor: '#E6F3EE',
+          backgroundColor: Colors.light.background.green,
           borderRadius: 5,
           alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
-          borderColor: '#008859',
+          borderColor: Colors.light.border.primary,
           borderStyle: 'dashed',
           width: 325,
         }}
@@ -174,11 +199,14 @@ export const UploadButton = ({
         accessibilityHint="Double clic pour ouvrir le sélecteur de fichier."
         onPress={onPress}
       >
-        <IconCircleAddOutline color="#008859" />
+        <IconCircleAddOutline
+          accessibilityLabel="Icône ajouter"
+          color={Colors.light.text.link}
+        />
         <View style={{ gap: 6, flex: 1 }}>
           <Text
             style={{
-              color: '#0F0F0F',
+              color: Colors.light.text.primary,
               fontSize: 14,
               fontWeight: '700',
               lineHeight: 20,
@@ -186,7 +214,13 @@ export const UploadButton = ({
           >
             {title}
           </Text>
-          <Text style={{ color: '#000000', fontSize: 12, fontWeight: '300' }}>
+          <Text
+            style={{
+              color: Colors.light.text.secondary,
+              fontSize: 12,
+              fontWeight: '300',
+            }}
+          >
             {subTitle}
           </Text>
         </View>
@@ -195,7 +229,7 @@ export const UploadButton = ({
         <View style={{ width: 325 }}>
           <Text
             style={{
-              color: '#D21E1E',
+              color: Colors.light.text.error,
               fontSize: 14,
               fontWeight: '600',
               lineHeight: 20,
@@ -205,7 +239,7 @@ export const UploadButton = ({
           </Text>
           <Text
             style={{
-              color: '#D21E1E',
+              color: Colors.light.text.error,
               fontSize: 12,
               fontWeight: '400',
               lineHeight: 20,
