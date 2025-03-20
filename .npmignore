@@ -1,0 +1,12 @@
+.expo
+.expo-shared/
+.storybook/
+.rnstorybook/
+tsconfig.json
+babel.config.js
+metro.config.js
+app.config.js
+src/stories/
+App.tsx
+app.json
+src/assets/dev/

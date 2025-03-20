@@ -252,3 +252,5 @@ export const UploadButton = ({
     </View>
   );
 };
+
+export default UploadButton;
