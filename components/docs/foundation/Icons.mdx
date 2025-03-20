@@ -1,0 +1,57 @@
+import {
+  Canvas,
+  Meta,
+  IconGallery,
+  IconItem,
+  ArgTypes,
+} from '@storybook/blocks';
+import { IconFileTextOutline } from '../../Icons/IconFileTextOutline.component';
+import { IconFileCheckSolid } from '../../Icons/IconFileCheckSolid.component';
+import { IconEyesOutline } from '../../Icons/IconEyesOutline.component';
+import { IconCircleDeleteSolid } from '../../Icons/IconCircleDeleteSolid.component';
+import { IconCircleAddOutline } from '../../Icons/IconCircleAddOutline.component';
+import * as IconFileTextOutlineStories from '../../Icons/IconFileTextOutline.stories';
+
+<Meta title="Foundation/Icons" />
+
+<div>
+  <h1>Icons</h1>
+</div>
+
+Here, you can see every icon available in the library.
+
+You can import an icon by its name in your app like this: `<IconFileTextOutline />`.
+
+Here is an example with the different customizable variables available:
+
+<Canvas
+  of={IconFileTextOutlineStories.Default}
+  sourceState="shown"
+  withToolbar
+/>
+
+<ArgTypes of={IconFileTextOutlineStories} />
+
+<br />
+
+## Icons
+
+<br />
+
+<IconGallery>
+  <IconItem name="IconFileTextOutline">
+    <IconFileTextOutline />
+  </IconItem>
+  <IconItem name="IconFileCheckSolid">
+    <IconFileCheckSolid />
+  </IconItem>
+  <IconItem name="IconEyesOutline">
+    <IconEyesOutline />
+  </IconItem>
+  <IconItem name="IconCircleDeleteSolid">
+    <IconCircleDeleteSolid />
+  </IconItem>
+  <IconItem name="IconCircleAddOutline">
+    <IconCircleAddOutline />
+  </IconItem>
+</IconGallery>

@@ -5,11 +5,11 @@ import { View } from 'react-native';
 import { UploadButton } from './UploadButton.component';
 
 const meta = {
-  title: 'UploadButton',
+  title: 'Components/UploadButton',
   component: UploadButton,
   decorators: [
     (Story) => (
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16, maxWidth: 360 }}>
         <Story />
       </View>
     ),

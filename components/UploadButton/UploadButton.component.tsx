@@ -7,6 +7,7 @@ import IconFileCheckSolid from '../Icons/IconFileCheckSolid.component';
 import IconEyesOutline from '../Icons/IconEyesOutline.component';
 import IconCircleDeleteSolid from '../Icons/IconCircleDeleteSolid.component';
 import { Colors } from '../../theme';
+import { ButtonIcon } from '../ButtonIcon/ButtonIcon.component';
 
 interface UploadButtonProps {
   onPress: () => void;
@@ -49,14 +50,12 @@ export const UploadButton = ({
           padding: 15,
           backgroundColor: Colors.light.input.primary.background,
           borderRadius: 5,
-          alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
           borderColor: Colors.light.input.primary.border,
           borderStyle: 'solid',
-          width: 325,
         }}
       >
         <View>
@@ -87,11 +86,9 @@ export const UploadButton = ({
           </Text>
         </View>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          {Boolean(loaded.onCheck) && (
-            <Pressable
+          {Boolean(loaded.onCheck) && loaded.onCheck && (
+            <ButtonIcon
               onPress={loaded.onCheck}
-              hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
-              accessibilityRole="button"
               accessibilityLabel="Aperçu"
               accessibilityHint="Double clic pour afficher l'aperçu du fichier."
             >
@@ -100,12 +97,10 @@ export const UploadButton = ({
                 color={Colors.light.text.primary}
                 size={20}
               />
-            </Pressable>
+            </ButtonIcon>
           )}
-          <Pressable
+          <ButtonIcon
             onPress={loaded.onDelete}
-            hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
-            accessibilityRole="button"
             accessibilityLabel="Supprimer"
             accessibilityHint="Double clic pour supprimer le fichier."
           >
@@ -114,7 +109,7 @@ export const UploadButton = ({
               color={Colors.light.text.primary}
               size={20}
             />
-          </Pressable>
+          </ButtonIcon>
         </View>
       </View>
     );
@@ -127,14 +122,12 @@ export const UploadButton = ({
           padding: 15,
           backgroundColor: Colors.light.input.primary.background,
           borderRadius: 5,
-          alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
           borderColor: Colors.light.input.primary.border,
           borderStyle: 'solid',
-          width: 325,
         }}
       >
         <View style={{ opacity: 0.4 }}>
@@ -159,11 +152,9 @@ export const UploadButton = ({
             <View style={{ flex: 1 }}>
               <ProgressBar progress={10} />
             </View>
-            <Pressable
+            <ButtonIcon
               onPress={loading.onStop}
-              hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
               accessibilityLabel="Arrêter"
-              accessibilityRole="button"
               accessibilityHint="Double clic pour arrêter le chargement du fichier."
             >
               <IconCircleDeleteSolid
@@ -171,7 +162,7 @@ export const UploadButton = ({
                 color={Colors.light.text.primary}
                 size={20}
               />
-            </Pressable>
+            </ButtonIcon>
           </View>
         </View>
       </View>
@@ -179,20 +170,18 @@ export const UploadButton = ({
   }
 
   return (
-    <View style={{ gap: 10, alignSelf: 'flex-start' }}>
+    <View style={{ gap: 10 }}>
       <Pressable
         style={{
           padding: 15,
           backgroundColor: Colors.light.background.green,
           borderRadius: 5,
-          alignSelf: 'flex-start',
           flexDirection: 'row',
           alignItems: 'center',
           gap: 15,
           borderWidth: 1,
           borderColor: Colors.light.border.primary,
           borderStyle: 'dashed',
-          width: 325,
         }}
         accessibilityRole="button"
         accessibilityLabel={`${title}, ${subTitle}`}
@@ -226,7 +215,7 @@ export const UploadButton = ({
         </View>
       </Pressable>
       {error && (
-        <View style={{ width: 325 }}>
+        <View>
           <Text
             style={{
               color: Colors.light.text.error,

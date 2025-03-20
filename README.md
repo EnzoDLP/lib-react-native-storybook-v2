@@ -1,22 +1,9 @@
+TODO: This section will contain the tutorial and information on how to install and use this library for:
+
+- The development of the storybook
+- The use of the library
+
 ![picture of storybook](https://github.com/user-attachments/assets/cf98766d-8b90-44ab-b718-94ab16e63205)
-
-# getting started
-
-```sh
-npx create-expo-app --template expo-template-storybook AwesomeStorybook
-```
-
-or
-
-```sh
-yarn create expo-app --template expo-template-storybook AwesomeStorybook
-```
-
-# app
-
-```sh
-yarn start
-```
 
 # RN Storybook (ondevice)
 

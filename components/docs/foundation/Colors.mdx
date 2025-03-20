@@ -1,0 +1,179 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { Colors } from '../../../theme';
+
+<Meta
+  title="Foundation/Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<div class="cover2">
+  <h1>Colors</h1>
+</div>
+
+## Text
+
+<ColorPalette>
+<ColorItem
+  title="primary"
+  colors={{
+    'primary': Colors.light.text.primary,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="secondary"
+  colors={{
+    secondary: Colors.light.text.secondary,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="disabled"
+  colors={{
+    disabled: Colors.light.text.disabled,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="onBackground"
+  colors={{
+    onBackground: Colors.light.text.onBackground,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="link"
+  colors={{
+    link: Colors.light.text.link,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="linkHover"
+  colors={{
+    linkHover: Colors.light.text.linkHover,
+  }}
+/>
+
+<br />
+
+<ColorItem
+  title="error"
+  colors={{
+    'error': Colors.light.text.error,
+  }}
+/>
+</ColorPalette>
+
+## Buttons
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    colors={{
+      primary: Colors.light.buttons.primary,
+      hover: Colors.light.buttons.hover,
+      disabled: Colors.light.buttons.disabled,
+    }}
+  />
+  <ColorItem
+    title="onBackground"
+    colors={{
+      primary: Colors.light.buttons.onBackground,
+    }}
+  />
+</ColorPalette>
+
+## Border
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    colors={{
+      primary: Colors.light.border.primary,
+    }}
+  />
+</ColorPalette>
+
+## Background
+
+<ColorPalette>
+  <ColorItem
+    title="light"
+    colors={{
+      primary: Colors.light.background.light,
+    }}
+  />
+  <ColorItem
+    title="dark"
+    colors={{
+      primary: Colors.light.background.dark,
+    }}
+  />
+  <ColorItem
+    title="green"
+    colors={{
+      primary: Colors.light.background.green,
+    }}
+  />
+  <ColorItem
+    title="default"
+    colors={{
+      primary: Colors.light.background.default,
+    }}
+  />
+  <ColorItem
+    title="grey"
+    colors={{
+      primary: Colors.light.background.grey,
+    }}
+  />
+</ColorPalette>
+
+## Input
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    colors={{
+      background: Colors.light.input.primary.background,
+      border: Colors.light.input.primary.border,
+    }}
+  />
+  <ColorItem
+    title="focus"
+    colors={{
+      background: Colors.light.input.focus.background,
+      border: Colors.light.input.focus.border,
+    }}
+  />
+  <ColorItem
+    title="error"
+    colors={{
+      background: Colors.light.input.error.background,
+      border: Colors.light.input.error.border,
+    }}
+  />
+  <ColorItem
+    title="disabled"
+    colors={{
+      background: Colors.light.input.disabled.background,
+      border: Colors.light.input.disabled.border,
+    }}
+  />
+</ColorPalette>
