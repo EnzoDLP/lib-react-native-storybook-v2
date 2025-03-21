@@ -8,42 +8,48 @@ import IconEyesOutline from '../Icons/IconEyesOutline.component';
 import IconCircleDeleteSolid from '../Icons/IconCircleDeleteSolid.component';
 import { Colors } from '../../theme';
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon.component';
+import Typography from '../Typography/Typography.component';
 
 interface UploadButtonProps {
-  onPress: () => void;
+  onPressUpload: () => void;
   title: string;
   subTitle: string;
-  error?: {
-    title: string;
-    subTitle: string;
-  };
-  loading?: {
-    title: string;
-    onStop: () => void;
-  };
-  loaded?: {
-    title: string;
-    size: string;
-    onDelete: () => void;
-    onCheck?: () => void;
-  };
+
+  isError?: boolean;
+  isLoading?: boolean;
+
+  errorTitle?: string;
+  errorSubtitle?: string;
+
+  fileName?: string;
+  fileSize?: string;
+
+  onStopLoading: () => void;
+  onDeleteFile: () => void;
+  onCheckFile?: () => void;
 }
 
 export const UploadButton = ({
-  onPress,
+  onPressUpload,
   title,
   subTitle,
-  error,
-  loading,
-  loaded,
+  isError = false,
+  isLoading = false,
+  errorTitle,
+  errorSubtitle,
+  fileName,
+  fileSize,
+  onStopLoading,
+  onDeleteFile,
+  onCheckFile,
 }: UploadButtonProps) => {
   useEffect(() => {
-    if (error) {
-      AccessibilityInfo.announceForAccessibility(error.title);
+    if (isError && errorTitle) {
+      AccessibilityInfo.announceForAccessibility(errorTitle);
     }
-  }, [error]);
+  }, [isError, errorTitle]);
 
-  if (loaded) {
+  if (!isLoading && fileName) {
     return (
       <View
         style={{
@@ -60,35 +66,22 @@ export const UploadButton = ({
       >
         <View>
           <IconFileCheckSolid
-            accessibilityLabel="Icône fichier chargé"
+            accessibilityLabel=""
             color={Colors.light.text.link}
           />
         </View>
         <View style={{ gap: 6, flex: 1 }}>
-          <Text
-            style={{
-              color: Colors.light.text.primary,
-              fontSize: 14,
-              fontWeight: '600',
-              lineHeight: 20,
-            }}
-          >
-            {loaded.title}
-          </Text>
-          <Text
-            style={{
-              color: Colors.light.text.primary,
-              fontSize: 12,
-              fontWeight: '400',
-            }}
-          >
-            {loaded.size}
-          </Text>
+          <Typography variant="small" weight="semiBold">
+            {fileName}
+          </Typography>
+          <Typography variant="extraSmall" weight="regular">
+            {fileSize}
+          </Typography>
         </View>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          {Boolean(loaded.onCheck) && loaded.onCheck && (
+          {onCheckFile && (
             <ButtonIcon
-              onPress={loaded.onCheck}
+              onPress={onCheckFile}
               accessibilityLabel="Aperçu"
               accessibilityHint="Double clic pour afficher l'aperçu du fichier."
             >
@@ -100,7 +93,7 @@ export const UploadButton = ({
             </ButtonIcon>
           )}
           <ButtonIcon
-            onPress={loaded.onDelete}
+            onPress={onDeleteFile}
             accessibilityLabel="Supprimer"
             accessibilityHint="Double clic pour supprimer le fichier."
           >
@@ -115,7 +108,7 @@ export const UploadButton = ({
     );
   }
 
-  if (loading) {
+  if (isLoading) {
     return (
       <View
         style={{
@@ -132,28 +125,24 @@ export const UploadButton = ({
       >
         <View style={{ opacity: 0.4 }}>
           <IconFileTextOutline
-            accessibilityLabel="Icône fichier"
+            accessibilityLabel=""
             color={Colors.light.text.primary}
           />
         </View>
         <View style={{ flex: 1 }}>
-          <Text
-            style={{
-              color: Colors.light.text.primary,
-              opacity: 0.4,
-              fontSize: 14,
-              fontWeight: '600',
-              lineHeight: 20,
-            }}
+          <Typography
+            variant="small"
+            weight="semiBold"
+            style={{ opacity: 0.4 }}
           >
-            {loading.title}
-          </Text>
+            {fileName}
+          </Typography>
           <View style={{ gap: 15, alignItems: 'center', flexDirection: 'row' }}>
             <View style={{ flex: 1 }}>
               <ProgressBar progress={10} />
             </View>
             <ButtonIcon
-              onPress={loading.onStop}
+              onPress={onStopLoading}
               accessibilityLabel="Arrêter"
               accessibilityHint="Double clic pour arrêter le chargement du fichier."
             >
@@ -186,56 +175,33 @@ export const UploadButton = ({
         accessibilityRole="button"
         accessibilityLabel={`${title}, ${subTitle}`}
         accessibilityHint="Double clic pour ouvrir le sélecteur de fichier."
-        onPress={onPress}
+        onPress={onPressUpload}
       >
         <IconCircleAddOutline
           accessibilityLabel="Icône ajouter"
           color={Colors.light.text.link}
         />
         <View style={{ gap: 6, flex: 1 }}>
-          <Text
-            style={{
-              color: Colors.light.text.primary,
-              fontSize: 14,
-              fontWeight: '700',
-              lineHeight: 20,
-            }}
-          >
+          <Typography variant="small" weight="bold">
             {title}
-          </Text>
-          <Text
-            style={{
-              color: Colors.light.text.secondary,
-              fontSize: 12,
-              fontWeight: '300',
-            }}
+          </Typography>
+          <Typography
+            variant="extraSmall"
+            color="secondary"
+            style={{ fontWeight: '300' }}
           >
             {subTitle}
-          </Text>
+          </Typography>
         </View>
       </Pressable>
-      {error && (
+      {isError && (
         <View>
-          <Text
-            style={{
-              color: Colors.light.text.error,
-              fontSize: 14,
-              fontWeight: '600',
-              lineHeight: 20,
-            }}
-          >
-            {error.title}
-          </Text>
-          <Text
-            style={{
-              color: Colors.light.text.error,
-              fontSize: 12,
-              fontWeight: '400',
-              lineHeight: 20,
-            }}
-          >
-            {error.subTitle}
-          </Text>
+          <Typography variant="small" weight="semiBold" color="error">
+            {errorTitle}
+          </Typography>
+          <Typography variant="small" weight="regular" color="error">
+            {errorSubtitle}
+          </Typography>
         </View>
       )}
     </View>

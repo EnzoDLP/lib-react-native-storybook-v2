@@ -41,6 +41,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
       accessible={true}
       accessibilityRole="progressbar"
       accessibilityValue={{ min: 0, max: 100, now: progress }}
+      accessibilityLabel={`Progression : ${progress}%`}
       aria-valuenow={progress}
       aria-valuemin={0}
       aria-valuemax={100}

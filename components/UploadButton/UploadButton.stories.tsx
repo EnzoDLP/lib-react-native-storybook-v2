@@ -14,6 +14,13 @@ const meta = {
       </View>
     ),
   ],
+  args: {
+    title: 'Ajouter un document',
+    subTitle: 'PNG, JPG, PDF - taille du fichier max : 10Mo',
+    onDeleteFile: action('onDeleteFile'),
+    onStopLoading: action('onStopLoading'),
+    onPressUpload: action('onPressUpload'),
+  },
 } satisfies Meta<typeof UploadButton>;
 
 export default meta;
@@ -21,48 +28,31 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    title: 'Ajouter un document',
-    subTitle: 'PNG, JPG, PDF - taille du fichier max : 10Mo',
-    onPress: action('onPress'),
+  argTypes: {
+    isError: { control: false },
   },
 };
 
 export const Loading: Story = {
   args: {
-    title: 'Ajouter un document',
-    subTitle: 'PNG, JPG, PDF - taille du fichier max : 10Mo',
-    loading: {
-      title: 'Lorem ipsum',
-      onStop: action('onStop'),
-    },
-    onPress: action('onPress'),
+    isLoading: true,
+    fileName: 'Lorem ipsum',
   },
 };
 
 export const Loaded: Story = {
   args: {
-    title: 'Ajouter un document',
-    subTitle: 'PNG, JPG, PDF - taille du fichier max : 10Mo',
-    loaded: {
-      title: 'Lorem ipsum',
-      size: '5.4MB',
-      onCheck: action('onStop'),
-      onDelete: action('onDelete'),
-    },
-    onPress: action('onPress'),
+    fileName: 'Lorem ipsum',
+    fileSize: '5.4MB',
+    onCheckFile: action('onCheckFile'),
   },
 };
 
 export const Error: Story = {
   args: {
-    title: 'Ajouter un document',
-    subTitle: 'PNG, JPG, PDF - taille du fichier max : 10Mo',
-    error: {
-      title: 'Erreur de chargement',
-      subTitle:
-        'Formats acceptés : PNG, JPG, PDF - Taille maximum du document : 10Mo',
-    },
-    onPress: action('onPress'),
+    isError: true,
+    errorTitle: 'Erreur de chargement',
+    errorSubtitle:
+      'Formats acceptés : PNG, JPG, PDF - Taille maximum du document : 10Mo',
   },
 };
