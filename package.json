@@ -1,7 +1,7 @@
 {
   "name": "bnpp-ere-design-system",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "node_modules/expo/AppEntry.js",
   "license": "MIT",
   "scripts": {
     "start": "expo start",
