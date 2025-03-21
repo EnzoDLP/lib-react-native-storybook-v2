@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/ProgressBar Default smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px;"
+>
+  <div aria-label="Progression : 10%"
+       role="progressbar"
+       aria-valuemax="100"
+       aria-valuemin="0"
+       aria-valuenow="10"
+       class="css-view-175oi2r"
+       style="width: 100%; border-radius: 5px; overflow: hidden; height: 5px; background-color: rgb(232, 232, 232);"
+  >
+    <div class="css-view-175oi2r"
+         style="height: 100%; border-radius: 100px; background-color: rgb(0, 136, 89); width: 10%;"
+    >
+    </div>
+  </div>
+</div>
+`;

@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "storybook:web": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storybook-generate": "sb-rn-get-stories --config-path .rnstorybook"
+    "storybook-generate": "sb-rn-get-stories --config-path .rnstorybook",
+    "test-storybook": "test-storybook --coverage"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -31,6 +32,7 @@
     "@storybook/addon-a11y": "^8.6.7",
     "@storybook/addon-actions": "^8.5.3",
     "@storybook/addon-controls": "^8.5.3",
+    "@storybook/addon-coverage": "^1.0.5",
     "@storybook/addon-essentials": "^8.5.3",
     "@storybook/addon-links": "^8.5.3",
     "@storybook/addon-ondevice-actions": "^8.5.4",
@@ -42,6 +44,7 @@
     "@storybook/react-native": "^8.5.4",
     "@storybook/react-native-web-vite": "^8.5.3",
     "@storybook/test": "^8.5.3",
+    "@storybook/test-runner": "^0.22.0",
     "@types/react": "~18.2.79",
     "babel-plugin-react-docgen-typescript": "^1.5.1",
     "babel-plugin-react-native-web": "^0.19.10",

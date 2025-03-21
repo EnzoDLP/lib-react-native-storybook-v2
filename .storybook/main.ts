@@ -11,6 +11,7 @@ const main: StorybookConfig = {
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-a11y',
+    '@storybook/addon-coverage',
   ],
 
   framework: {

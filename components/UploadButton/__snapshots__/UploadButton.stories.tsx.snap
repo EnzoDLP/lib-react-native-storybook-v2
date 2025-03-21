@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/UploadButton Default smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px; max-width: 360px;"
+>
+  <div class="css-view-175oi2r"
+       style="gap: 10px;"
+  >
+    <button aria-label="Ajouter un document, PNG, JPG, PDF - taille du fichier max : 10Mo"
+            role="button"
+            tabindex="0"
+            class="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73"
+            type="button"
+            style="padding: 15px; background-color: rgb(230, 243, 238); border-radius: 5px; flex-direction: row; align-items: center; gap: 15px; border-width: 1px; border-color: rgb(0, 136, 89); border-style: dashed;"
+    >
+      <svg width="24"
+           height="24"
+           viewbox="0 0 24 24"
+           fill="none"
+           aria-label="Icône ajouter"
+           role="img"
+      >
+        <g clip-path="url(#clip0_19238_203083)">
+          <path d="M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0zm0 22a10 10 0 1110-10 10.011 10.011 0 01-10 10zm5-10a1 1 0 01-1 1h-3v3a1 1 0 01-2 0v-3H8a1 1 0 010-2h3V8a1 1 0 012 0v3h3a1 1 0 011 1z"
+                fill="#008859"
+          >
+          </path>
+        </g>
+      </svg>
+      <div class="css-view-175oi2r"
+           style="gap: 6px; flex: 1 1 0%;"
+      >
+        <div dir="auto"
+             class="css-text-146c3p1"
+             style="font-size: 14px; line-height: 20px; font-weight: 700; color: rgb(15, 15, 15);"
+        >
+          Ajouter un document
+        </div>
+        <div dir="auto"
+             class="css-text-146c3p1"
+             style="font-size: 12px; line-height: 18px; font-weight: 300; color: rgb(0, 0, 0);"
+        >
+          PNG, JPG, PDF - taille du fichier max : 10Mo
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Components/UploadButton Error smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px; max-width: 360px;"
+>
+  <div class="css-view-175oi2r"
+       style="gap: 10px;"
+  >
+    <button aria-label="Ajouter un document, PNG, JPG, PDF - taille du fichier max : 10Mo"
+            role="button"
+            tabindex="0"
+            class="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73"
+            type="button"
+            style="padding: 15px; background-color: rgb(230, 243, 238); border-radius: 5px; flex-direction: row; align-items: center; gap: 15px; border-width: 1px; border-color: rgb(0, 136, 89); border-style: dashed;"
+    >
+      <svg width="24"
+           height="24"
+           viewbox="0 0 24 24"
+           fill="none"
+           aria-label="Icône ajouter"
+           role="img"
+      >
+        <g clip-path="url(#clip0_19238_203083)">
+          <path d="M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0zm0 22a10 10 0 1110-10 10.011 10.011 0 01-10 10zm5-10a1 1 0 01-1 1h-3v3a1 1 0 01-2 0v-3H8a1 1 0 010-2h3V8a1 1 0 012 0v3h3a1 1 0 011 1z"
+                fill="#008859"
+          >
+          </path>
+        </g>
+      </svg>
+      <div class="css-view-175oi2r"
+           style="gap: 6px; flex: 1 1 0%;"
+      >
+        <div dir="auto"
+             class="css-text-146c3p1"
+             style="font-size: 14px; line-height: 20px; font-weight: 700; color: rgb(15, 15, 15);"
+        >
+          Ajouter un document
+        </div>
+        <div dir="auto"
+             class="css-text-146c3p1"
+             style="font-size: 12px; line-height: 18px; font-weight: 300; color: rgb(0, 0, 0);"
+        >
+          PNG, JPG, PDF - taille du fichier max : 10Mo
+        </div>
+      </div>
+    </button>
+    <div class="css-view-175oi2r">
+      <div dir="auto"
+           class="css-text-146c3p1"
+           style="font-size: 14px; line-height: 20px; font-weight: 600; color: rgb(210, 30, 30);"
+      >
+        Erreur de chargement
+      </div>
+      <div dir="auto"
+           class="css-text-146c3p1"
+           style="font-size: 14px; line-height: 20px; font-weight: 400; color: rgb(210, 30, 30);"
+      >
+        Formats acceptés : PNG, JPG, PDF - Taille maximum du document : 10Mo
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/UploadButton Loaded smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px; max-width: 360px;"
+>
+  <div class="css-view-175oi2r"
+       style="padding: 15px; background-color: rgb(255, 255, 255); border-radius: 5px; flex-direction: row; align-items: center; gap: 15px; border-width: 1px; border-color: rgb(104, 103, 103); border-style: solid;"
+  >
+    <div class="css-view-175oi2r">
+      <svg width="24"
+           height="24"
+           viewbox="0 0 24 24"
+           fill="none"
+           aria-hidden="true"
+           aria-label
+           role="img"
+      >
+        <g clip-path="url(#clip0_41104_1135)">
+          <path d="M14 7V.46c.925.35 1.765.891 2.465 1.59l3.484 3.486A6.953 6.953 0 0121.539 8H15a1 1 0 01-1-1zm8 3.485V19a5.005 5.005 0 01-5 5H7a5.006 5.006 0 01-5-5V5a5.006 5.006 0 015-5h4.515c.163 0 .324.013.485.024V7a3 3 0 003 3h6.976c.01.161.024.322.024.485zm-5.276 3.826a1 1 0 00-1.413-.035l-3.6 3.431a1 1 0 01-1.456-.04l-1.59-1.414a1 1 0 00-1.331 1.494l1.544 1.374a3 3 0 004.226.017l3.585-3.414a1 1 0 00.035-1.413z"
+                fill="#008859"
+          >
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="css-view-175oi2r"
+         style="gap: 6px; flex: 1 1 0%;"
+    >
+      <div dir="auto"
+           class="css-text-146c3p1"
+           style="font-size: 14px; line-height: 20px; font-weight: 600; color: rgb(15, 15, 15);"
+      >
+        Lorem ipsum
+      </div>
+      <div dir="auto"
+           class="css-text-146c3p1"
+           style="font-size: 12px; line-height: 18px; font-weight: 400; color: rgb(15, 15, 15);"
+      >
+        5.4MB
+      </div>
+    </div>
+    <div class="css-view-175oi2r"
+         style="flex-direction: row; gap: 10px; align-items: center;"
+    >
+      <button aria-label="Aperçu"
+              role="button"
+              tabindex="0"
+              class="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73"
+              type="button"
+      >
+        <svg width="20"
+             height="20"
+             viewbox="0 0 24 24"
+             fill="none"
+             aria-label="Icône voir fichier"
+             role="img"
+        >
+          <path d="M23.27 9.419C21.72 6.893 18.193 2.655 12 2.655c-6.192 0-9.72 4.238-11.271 6.764a4.908 4.908 0 000 5.162c1.55 2.526 5.079 6.764 11.27 6.764 6.193 0 9.72-4.238 11.272-6.764a4.908 4.908 0 000-5.162zm-1.704 4.115c-1.332 2.166-4.347 5.81-9.566 5.81-5.22 0-8.234-3.644-9.566-5.81a2.918 2.918 0 010-3.068C3.766 8.3 6.78 4.655 12 4.655s8.234 3.64 9.566 5.81a2.918 2.918 0 010 3.069z"
+                fill="#0F0F0F"
+          >
+          </path>
+          <path d="M12 7a5 5 0 105 5 5.006 5.006 0 00-5-5zm0 8a3 3 0 110-6.001 3 3 0 010 6z"
+                fill="#0F0F0F"
+          >
+          </path>
+        </svg>
+      </button>
+      <button aria-label="Supprimer"
+              role="button"
+              tabindex="0"
+              class="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73"
+              type="button"
+      >
+        <svg width="20"
+             height="20"
+             viewbox="0 0 24 24"
+             fill="none"
+             aria-label="Icône supprimer"
+             role="img"
+        >
+          <g clip-path="url(#clip0_10323_55129)">
+            <path d="M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0z"
+                  fill="#0F0F0F"
+            >
+            </path>
+            <path d="M15.828 9.172a1 1 0 00-1.707-.708L12 10.586 9.878 8.464A1 1 0 108.464 9.88L10.586 12l-2.122 2.121a1 1 0 001.414 1.415L12 13.414l2.121 2.122a1 1 0 101.414-1.415L13.414 12l2.121-2.121a1 1 0 00.293-.707z"
+                  fill="#FFFFFF"
+            >
+            </path>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components/UploadButton Loading smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px; max-width: 360px;"
+>
+  <div class="css-view-175oi2r"
+       style="padding: 15px; background-color: rgb(255, 255, 255); border-radius: 5px; flex-direction: row; align-items: center; gap: 15px; border-width: 1px; border-color: rgb(104, 103, 103); border-style: solid;"
+  >
+    <div class="css-view-175oi2r"
+         style="opacity: 0.4;"
+    >
+      <svg width="24"
+           height="24"
+           viewbox="0 0 24 24"
+           fill="none"
+           aria-hidden="true"
+           aria-label
+           role="img"
+      >
+        <g clip-path="url(#clip0_41098_9886)">
+          <path d="M17 14a1 1 0 01-1 1H8a1 1 0 110-2h8a1 1 0 011 1zm-4 3H8a1 1 0 000 2h5a1 1 0 100-2zm9-6.515V19a5.006 5.006 0 01-5 5H7a5.006 5.006 0 01-5-5V5a5.006 5.006 0 015-5h4.515a6.958 6.958 0 014.95 2.05l3.484 3.486A6.949 6.949 0 0122 10.485zm-6.949-7.021a5.008 5.008 0 00-1.05-.78V7a1 1 0 001 1h4.315a4.98 4.98 0 00-.78-1.05L15.05 3.464zm4.95 7.021c0-.165-.033-.323-.048-.485H15a3 3 0 01-3-3V2.047c-.162-.015-.32-.047-.485-.047H7a3 3 0 00-3 3v14a3 3 0 003 3h10a3 3 0 003-3v-8.515z"
+                fill="#0F0F0F"
+          >
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="css-view-175oi2r"
+         style="flex: 1 1 0%;"
+    >
+      <div dir="auto"
+           class="css-text-146c3p1"
+           style="font-size: 14px; line-height: 20px; font-weight: 600; opacity: 0.4; color: rgb(15, 15, 15);"
+      >
+        Lorem ipsum
+      </div>
+      <div class="css-view-175oi2r"
+           style="gap: 15px; align-items: center; flex-direction: row;"
+      >
+        <div class="css-view-175oi2r"
+             style="flex: 1 1 0%;"
+        >
+          <div aria-label="Progression : 10%"
+               role="progressbar"
+               aria-valuemax="100"
+               aria-valuemin="0"
+               aria-valuenow="10"
+               class="css-view-175oi2r"
+               style="width: 100%; border-radius: 5px; overflow: hidden; height: 5px; background-color: rgb(232, 232, 232);"
+          >
+            <div class="css-view-175oi2r"
+                 style="height: 100%; border-radius: 100px; background-color: rgb(0, 136, 89); width: 10%;"
+            >
+            </div>
+          </div>
+        </div>
+        <button aria-label="Arrêter"
+                role="button"
+                tabindex="0"
+                class="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73"
+                type="button"
+        >
+          <svg width="20"
+               height="20"
+               viewbox="0 0 24 24"
+               fill="none"
+               aria-label="Icône fichier chargé"
+               role="img"
+          >
+            <g clip-path="url(#clip0_10323_55129)">
+              <path d="M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0z"
+                    fill="#0F0F0F"
+              >
+              </path>
+              <path d="M15.828 9.172a1 1 0 00-1.707-.708L12 10.586 9.878 8.464A1 1 0 108.464 9.88L10.586 12l-2.122 2.121a1 1 0 001.414 1.415L12 13.414l2.121 2.122a1 1 0 101.414-1.415L13.414 12l2.121-2.121a1 1 0 00.293-.707z"
+                    fill="#FFFFFF"
+              >
+              </path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

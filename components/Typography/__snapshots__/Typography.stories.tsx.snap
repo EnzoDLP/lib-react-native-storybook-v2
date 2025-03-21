@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Typography Default smoke-test 1`] = `
+<div class="css-view-175oi2r"
+     style="padding: 16px;"
+>
+  <div dir="auto"
+       class="css-text-146c3p1"
+       style="font-size: 14px; line-height: 20px; font-weight: 700; color: rgb(210, 30, 30);"
+  >
+    Test
+  </div>
+</div>
+`;
