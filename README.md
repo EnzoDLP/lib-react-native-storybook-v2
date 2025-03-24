@@ -3,6 +3,32 @@ TODO: This section will contain the tutorial and information on how to install a
 - The development of the storybook
 - The use of the library
 
+# How to import component into your project
+
+```sh
+npm i @enzodlp/bnpp-ere-design-system
+```
+
+And after this, you can already import your component :
+
+```sh
+import { UploadButton } from '@enzodlp/bnpp-ere-design-system';
+
+<UploadButton
+  title={'Title'}
+  subTitle={'Subtitle'}
+  onPressUpload={() => {
+    console.log('onPressUpload');
+  }}
+  onStopLoading={() => {
+    console.log('onStopLoading');
+  }}
+  onDeleteFile={() => {
+    console.log('onDeleteFile');
+  }}
+/>
+```
+
 ![picture of storybook](https://github.com/user-attachments/assets/cf98766d-8b90-44ab-b718-94ab16e63205)
 
 # RN Storybook (ondevice)

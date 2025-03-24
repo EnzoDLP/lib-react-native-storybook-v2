@@ -1,7 +1,9 @@
 {
-  "name": "bnpp-ere-design-system",
+  "name": "@enzodlp/bnpp-ere-design-system",
+  "author": "Enzo DE LA PENA",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "description": "Librairie de composants React Native.",
+  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "start": "expo start",
@@ -75,6 +77,5 @@
     "overrides": {
       "react-docgen-typescript": "2.2.2"
     }
-  },
-  "private": true
+  }
 }
